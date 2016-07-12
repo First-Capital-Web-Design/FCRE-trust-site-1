@@ -265,19 +265,12 @@
 ///////////////GOOGLE MAPS API////////////
 var myCenter=new google.maps.LatLng(38.0386693,-77.2862994);
 
-	var locations = [
-	['loan 1', 33.890542, 151.274856, 'address 1'],
-	['loan 2', 33.923036, 151.259052, 'address 2'],
-	['loan 3', 34.028249, 151.157507, 'address 3'],
-	['loan 4', 33.80010128657071, 151.28747820854187, 'address 4'],
-	['loan 5', 33.950198, 151.259302, 'address 5']
-	];
 
 function initialize()
 {
 var mapProp = {
   center:myCenter,
-  zoom:6,
+  zoom:5,
 	scrollwheel: false,
 	styles: [
     {
@@ -428,17 +421,29 @@ var mapProp = {
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 var marker=new google.maps.Marker({
-  position:myCenter,
+  position: {lat: 40.6464233, lng: -73.95552},
+	title: "hello",
   });
+
 
 marker.setMap(map);
 
-var infowindow = new google.maps.InfoWindow({
-  content:"Hello World!"
-  });
+google.maps.event.addListener(marker , 'click', function(){
+		var infowindow = new google.maps.InfoWindow({
+			content:'Hello Title',
+			position: myLatLng,
+		});
+		infowindow.open(map);
+});
 
-infowindow.open(map,marker);
+
+
 }
+
+$(document).ready(function(){
+  google.maps.event.addDomListener(window, 'load', init()); // two calls
+
+});
 
 google.maps.event.addDomListener(window, 'load', initialize);
 /////////////////END GOOGLE MAPS///////
