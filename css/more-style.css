@@ -165,6 +165,9 @@
   width: 100vw;
   height: calc(100vh - 100px);
 }
+#map{
+  height: 100%;
+}
 .continue-button:hover{
   background-color: orange;
   color: #154b87;
