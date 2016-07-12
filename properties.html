@@ -241,7 +241,8 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 	<script src="js/script.js"> </script>
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
 	<script>
 		$(document).ready(function(){
 
@@ -263,187 +264,30 @@
 			});
 
 ///////////////GOOGLE MAPS API////////////
-var myCenter=new google.maps.LatLng(38.0386693,-77.2862994);
+function initialize() {
 
-
-function initialize()
-{
-var mapProp = {
-  center:myCenter,
-  zoom:5,
-	scrollwheel: false,
-	styles: [
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#444444"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#e9e7ef"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.natural.terrain",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "hue": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.natural.terrain",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "hue": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#6b81b0"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#444444"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#6b81b0"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#444444"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#154b87"
-            },
-            {
-                "visibility": "on"
-            }
-        ]
+    var mapOptions = {
+        zoom: 5,
+        center: new google.maps.LatLng(-34.000009, -56.197645),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     }
-],
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
+    var mapCanvas = document.createElement("div");
+    mapCanvas.id = "canvas";
+    mapCanvas.style.width = "100%";
+    mapCanvas.style.height = "100%";
+     $("#googleMap").append(mapCanvas);
+    var map = new google.maps.Map(mapCanvas, mapOptions);
 
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker=new google.maps.Marker({
-  position: {lat: 40.6464233, lng: -73.95552},
-	title: "hello",
-  });
-
-
-marker.setMap(map);
-
-google.maps.event.addListener(marker , 'click', function(){
-		var infowindow = new google.maps.InfoWindow({
-			content:'Hello Title',
-			position: myLatLng,
-		});
-		infowindow.open(map);
+		//=====Initialise InfoWindow
+var infowindow = new google.maps.InfoWindow({
+ content: "<B>Skyway Dr</B>"
 });
 
-
-
+//=====Eventlistener for InfoWindow
+google.maps.event.addListener(marker, 'click', function() {
+infowindow.open(map,marker);
+});
 }
-
-$(document).ready(function(){
-  google.maps.event.addDomListener(window, 'load', init()); // two calls
-
-});
 
 google.maps.event.addDomListener(window, 'load', initialize);
 /////////////////END GOOGLE MAPS///////
