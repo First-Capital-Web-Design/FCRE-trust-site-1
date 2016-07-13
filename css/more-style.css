@@ -168,9 +168,9 @@ html, body {
   padding: 0;
 }
 #map {
-    width: 60%;
-    height: calc(400px);
-    float: left;
+    width: 100vw;
+    height: calc(100vh - 110px);
+    margin-bottom: 0;
 }
 .properties-head{
   background-color: orange;
@@ -202,17 +202,30 @@ border-left: 200px solid transparent;
 border-right: 200px solid transparent;
 }
 .properties-blurb{
-  width: 40%;
-  height: 400px;
-  float: left;
-  padding: 40px 30px;
+  position: absolute;
+  width: 30%;
+  height: auto;
+  max-height: 90px;
+  padding: 20px 30px;
   background-color: #444;
-  box-shadow: 0 -20px orange inset;
+  border: 1px solid orange;
+  border-bottom: 15px solid orange;
+  right: 30px;
+  top: 140px;
+  z-index: 3;
+  overflow: hidden;
+  -webkit-transition: all 2.5s ease-out;
+}
+.properties-blurb:hover{
+  max-height: 800px;
 }
 .properties-blurb p{
   font-size: 1.4vw;
   line-height: 26px;
   color: white;
+}
+.properties-blurb h1{
+
 }
 .property-icon-content{
   position: fixed;
@@ -221,9 +234,26 @@ border-right: 200px solid transparent;
   background-color: white;
   left: 20vw;
   z-index: 10;
+  bottom: -80vh;
   bottom: 15vh;
-  box-shadow: 1px 1px 30px #444;
+  box-shadow: 1px 1px 30px #444, 0px 0px 2000px 2000px rgba(0, 0, 0, .5);
+  -webkit-transition: all 1.5s ease-out;
   display: none;
+  padding: 50px;
+  overflow: scroll;
+}
+.property-icon-content-active{
+  bottom: 15vh;
+  z-index: 10;
+  opacity: 1;
+}
+.remove{
+  position: absolute;
+  right: 8px;
+  top: -10px;
+  font-size: 35px;
+  color: orange;
+  font-weight: 500;
 }
 .property-map-container{
   box-shadow: 1px 1px 10px #444;
@@ -288,6 +318,7 @@ border-right: 200px solid transparent;
 }
 .icon-head h4 {
   color: white;
+  font-size: 17px;
 }
 .icon-head p{
   color: orange;
@@ -306,14 +337,15 @@ border-right: 200px solid transparent;
   background-size: 100% auto;
   background-position: bottom;
   background-repeat: no-repeat;
-  -webkit-transition: all 1s;
   float: left;
+  height: 50%;
 }
 .slide-object+.slide-object{
   margin-left: 10px;
 }
 .slide-object-active{
   width: 50%;
+  height: 100%;
 }
 .property{
   float: left;

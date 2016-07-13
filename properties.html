@@ -142,8 +142,18 @@
 								<div class="continue-button">Continue</div>
 				</div>
 		</div> -->
+		<div id="map"></div>
 
-		<div id="fh5co-common-section" style="margin-top: 100px; position: relative; z-index: 10; background-color: white;">
+		<div class="properties-blurb">
+			<h1 style="color:white;">Our Portfolio</h1>
+			<p>Lorem ipsum dolor sit amet, doming persecuti ex pro, nam at veri assueverit. Et mea possim concludaturque,
+				 vidit natum eleifend an est, pro vocent nominati adolescens ei. Eligendi delicata te nam, debitis feugait
+					minimum mei ne. Mei cu nullam repudiandae. Eam an dictas feugait minimum, ex amet fierent mei. An ignota
+					recusabo sit, in eam velit signiferumque.
+			</p>
+		</div>
+
+		<!-- <div id="fh5co-common-section" style="margin-top: 100px; position: relative; z-index: 10; background-color: white;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
@@ -166,9 +176,9 @@
 				</div>
 			</div>
 		</div>
-	</div><!-- end fh5co-common-section -->
+	</div> -->
 
-	<div id="fh5co-common-section" style=" background-color: #b3cccc; box-shadow: -350px 0 700px -300px #669999 inset,  350px 0 700px -300px #669999 inset">
+	<div id="fh5co-common-section" style="background-color: #b3cccc; box-shadow: -350px 0 700px -300px #669999 inset,  350px 0 700px -300px #669999 inset, 0px -2px 10px #444; position: relative; z-index: 4;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
@@ -178,10 +188,31 @@
 							<div class="properties-head">THE PROPERTIES</div>
 						<div class="property-icon-container">
 							<div class="property-icon first-property-icon" style="background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/medical-office-sc-blue.jpg?raw=true)"><div class="icon-overlay" style="background-image:url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/medical-office-sc-color.jpg?raw=true)"></div><div class="icon-head"><h4>MEDICAL OFFICE<h4><p>Myrtle Beach, South Carolina<p></div></div>
-							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>TILDEN HOUSE<h4><p>Brooklyn, New York<p></div><div class="property-icon-content"></div></div>
+							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>TILDEN HOUSE<h4><p>Brooklyn, New York<p></div><div class="property-icon-content"><div class="remove">☒</div>
+
+								<div class="property">
+								<div class="slideshow-container">
+									<div class="slide-object slide-object-active" style="background-image:url(http://fcretrust.com/assets/urti-properties/TildenProperty0.jpg);"></div>
+									<div class="slide-object" style="background-image:url(http://fcretrust.com/assets/urti-properties/TildenProperty4.jpg);"></div>
+									<div class="slide-object" style="background-image:url(http://fcretrust.com/assets/urti-properties/TildenProperty3.jpg);"></div>
+								</div>
+								<h1>Tilden House - Brooklyn, New York</h1>
+									<h3>Asset Summary</h3>
+
+										<p>The property is a 9-story elevator building with 117 one bedroom and studio apartments comprising 86,360 square feet. The average unit size is 432+/- sq. ft. and each unit has a kitchen, bathroom and other typical apartment necessities. Constructed in 2004, the property was built structurally as a standard apartment building. The property is located in the East Flatbush section of Brooklyn between Lott Street and Veronica Place, southeast of Prospect Park. The area is characterized by typical urban residences, row houses and cottage homes, along the side streets and mostly "mom and pop" retail along the main thoroughfares. The area is well served by public transportation.</h3>
+
+										<h3>Investment Thesis</h3>
+
+										<p>Given the property's inflation-indexed, long term scheduled rental payments, the REIT believes this asset will contribute to the first objective of it's Dual Strategy; providing the potential for consistent dividend distributions.</p>
+
+										<p>There can be no assurances that these investment objectives will be met, and the achievement of any or all goals is not guaranteed.</p>
+
+								</div>
+
+							</div></div>
 							<div class="property-icon" style="background-image:url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/corporate-headquarters-nj-blue.jpg?raw=true)"><div class="icon-overlay" style="background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/corporate-headquaters-nj-color.jpg?raw=true)"></div><div class="icon-head"><h4>CORPORATE HQ<h4><p>Cherry Hill, New Jersey<p></div></div>
-							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>TILDEN HOUSE<h4><p>Brooklyn, New York<p></div></div>
-							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>TILDEN HOUSE<h4><p>Brooklyn, New York<p></div></div>
+							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>799 HANES MALL BLVD.<h4><p>Winston-Salem, NC<p></div></div>
+							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>402 & 404 LIPPINCOTT DRIVE<h4><p>Marlton, New Jersey<p></div></div>
 							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>TILDEN HOUSE<h4><p>Brooklyn, New York<p></div></div>
 							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>TILDEN HOUSE<h4><p>Brooklyn, New York<p></div></div>
 							<div class="property-icon"><div class="icon-overlay"></div><div class="icon-head"><h4>TILDEN HOUSE<h4><p>Brooklyn, New York<p></div></div>
@@ -328,8 +359,8 @@
 	function initMap() {
 		map = new google.maps.Map(document.getElementById('map'), {
 			scrollwheel: false,
-			center: {lat: 37.2831383, lng: -92.9683574},
-			zoom: 3,
+			center: {lat: 37.2831383, lng: -73.9683574},
+			zoom: 4,
 			mapTypeControl: false,
 			styles: [
 			  {
@@ -504,9 +535,23 @@
 
 			});
 
-///////////////GOOGLE MAPS API////////////
+			$(".icon-head").click(function(){
 
-/////////////////END GOOGLE MAPS///////
+				$(this).parent().children(".property-icon-content").css("display","block");
+
+			});
+
+			$(".icon-overlay").click(function(){
+
+				$(this).parent().children(".property-icon-content").css("display","block");
+
+			});
+
+			$(".remove").click(function(){
+
+				$(this).parent().css("display", "none");
+
+			});
 
 	});
 
