@@ -172,6 +172,35 @@ html, body {
     height: calc(400px);
     float: left;
 }
+.properties-head{
+  background-color: orange;
+  color: white;
+  width: 400px;
+  margin-left: calc(50% - 200px);
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 60px;
+  height: 125px;
+  padding-top: 24px;
+
+position: relative;
+color: white;
+letter-spacing: 0.2em;
+text-align: center;
+text-transform: uppercase;
+}
+.properties-head:after{
+  content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 0;
+border-bottom: 30px solid #b3cccc;
+border-left: 200px solid transparent;
+border-right: 200px solid transparent;
+}
 .properties-blurb{
   width: 40%;
   height: 400px;
@@ -184,6 +213,17 @@ html, body {
   font-size: 1.4vw;
   line-height: 26px;
   color: white;
+}
+.property-icon-content{
+  position: fixed;
+  width: 60vw;
+  height: 70vh;
+  background-color: white;
+  left: 20vw;
+  z-index: 10;
+  bottom: 15vh;
+  box-shadow: 1px 1px 30px #444;
+  display: none;
 }
 .property-map-container{
   box-shadow: 1px 1px 10px #444;
