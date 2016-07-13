@@ -205,9 +205,13 @@ html, body {
   width: 21.8%;
   height: 200px;
   margin: 40px 0 0 0;
-  outline: 1px solid purple; float: left;
+  float: left;
   box-shadow: 1px 1px 6px grey;
   overflow: hidden;
+  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/TildenProperty0.jpg?raw=true);
+  background-size: auto 165px;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 .property-icon+.property-icon{
   margin-right: 3%;
@@ -216,16 +220,31 @@ html, body {
   margin-right: 3%;
 }
 .icon-head{
-  width: 100%;
+  width: 300px;
   height: 60px;
-  background-color:#154b87;
+  background-color: orange;
   position: absolute;
   padding: 10px;
   bottom: -25px;
   -webkit-transition: all .35s ease-out;
+  left: 0;
+}
+.icon-overlay{
+  background-image: url(http://fcretrust.com/assets/urti-properties/TildenProperty0.jpg);
+  height: 165px;
+  width: 100%;
+  background-size: auto 165px;
+  background-position: top;
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: all .35s ease-out;
 }
 .property-icon:hover .icon-head{
   bottom: 0;
+  background-color:#154b87;
+}
+.property-icon:hover .icon-overlay{
+  opacity: 1;
 }
 .icon-head h4 {
   color: white;
