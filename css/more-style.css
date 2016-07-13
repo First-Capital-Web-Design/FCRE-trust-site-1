@@ -1,3 +1,5 @@
+p{
+}
 .placeholder{
   background-image: url("") !important;
   background-size: 100% 100%;
@@ -166,8 +168,73 @@ html, body {
   padding: 0;
 }
 #map {
-    width: 100vw;
-    height: calc(100vh - 100px);;
+    width: 60%;
+    height: calc(400px);
+    float: left;
+}
+.properties-blurb{
+  width: 40%;
+  height: 400px;
+  float: left;
+  padding: 40px 30px;
+  background-color: #444;
+  box-shadow: 0 -20px orange inset;
+}
+.properties-blurb p{
+  font-size: 1.4vw;
+  line-height: 26px;
+  color: white;
+}
+.property-map-container{
+  box-shadow: 1px 1px 10px #444;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.property-icon-container{
+  width: 104%;
+  height: auto;
+  display: inline-block;
+  float: left;
+  margin-bottom: 100px;
+}
+.property-icon{
+  display: inline-block;
+  position: relative;
+  width: 21.8%;
+  height: 200px;
+  margin: 40px 0 0 0;
+  outline: 1px solid purple; float: left;
+  box-shadow: 1px 1px 6px grey;
+  overflow: hidden;
+}
+.property-icon+.property-icon{
+  margin-right: 3%;
+}
+.first-property-icon{
+  margin-right: 3%;
+}
+.icon-head{
+  width: 100%;
+  height: 60px;
+  background-color:#154b87;
+  position: absolute;
+  padding: 10px;
+  bottom: -25px;
+  -webkit-transition: all .35s ease-out;
+}
+.property-icon:hover .icon-head{
+  bottom: 0;
+}
+.icon-head h4 {
+  color: white;
+}
+.icon-head p{
+  color: orange;
+  line-height: 0;
+  font-size: 15px;
+  margin-top: -18px;
 }
 .slideshow-container{
   width: 100%;
@@ -188,6 +255,9 @@ html, body {
 }
 .slide-object-active{
   width: 50%;
+}
+.property{
+  float: left;
 }
 .continue-button:hover{
   background-color: orange;

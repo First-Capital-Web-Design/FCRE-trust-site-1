@@ -67,7 +67,8 @@
 	<script src="js/jquery.scrollUp.min.js"> </script>
 
 	</head>
-	<body class="no-scroll">
+	<!-- <body class="no-scroll"> -->
+	<body>
 		<header style="background-color: white; box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);">
 			<div class="container text-center">
 				<div class="fh5co-navbar-brand">
@@ -87,13 +88,11 @@
 			</div>
 		</header>
 
-		<div id="map"></div>
-
 		<a href="about.html"><div class="logo"></div></a>
 
 		<div class="mobile-nav" style="width: 25px; height: 25px; background-image: url('https://www.newfangled.com/wp-content/uploads/2014/08/stuffcontentmgrfiles2ac67e44c30a21635f8a9d498f832bc1cmisc_resized80_313_257_hamenu.png'); background-size: 25px 25px;"></div>
 
-		<div class="terms-agree-container">
+		<!-- <div class="terms-agree-container">
 				<div class="terms-agree-content">
 
 					<h3>Risk Considerations</h3>
@@ -142,7 +141,7 @@
 
 								<div class="continue-button">Continue</div>
 				</div>
-		</div>
+		</div> -->
 
 	<div id="fh5co-common-section" style="margin-top: 100px;">
 		<div class="container">
@@ -151,6 +150,30 @@
 					<div class="col-md-12 col-sm-12 ">
 						<span class="number-holder"></span>
 						<div class="desc">
+							<div class="property-map-container">
+								<div id="map"></div>
+								<div class="properties-blurb">
+									<h1 style="color:orange;">Our Portfolio</h1>
+									<p>Lorem ipsum dolor sit amet, doming persecuti ex pro, nam at veri assueverit. Et mea possim concludaturque,
+										 vidit natum eleifend an est, pro vocent nominati adolescens ei. Eligendi delicata te nam, debitis feugait
+										  minimum mei ne. Mei cu nullam repudiandae. Eam an dictas feugait minimum, ex amet fierent mei. An ignota
+											recusabo sit, in eam velit signiferumque.
+									</p>
+								</div>
+						</div>
+						<div class="property-icon-container">
+							<div class="property-icon first-property-icon" ></div>
+							<div class="property-icon"><div class="icon-head"><h4>TILDEN HOUSE<h4><p>Brooklyn, New York<p></div></div>
+							<div class="property-icon"></div>
+							<div class="property-icon"></div>
+							<div class="property-icon"></div>
+							<div class="property-icon"></div>
+							<div class="property-icon"></div>
+							<div class="property-icon"></div>
+						</div>
+
+
+							<div class="property">
 							<div class="slideshow-container">
 								<div class="slide-object slide-object-active" style="background-image:url(http://fcretrust.com/assets/urti-properties/TildenProperty0.jpg);"></div>
 								<div class="slide-object" style="background-image:url(http://fcretrust.com/assets/urti-properties/TildenProperty4.jpg);"></div>
@@ -166,6 +189,9 @@
 									<p>Given the property's inflation-indexed, long term scheduled rental payments, the REIT believes this asset will contribute to the first objective of it's Dual Strategy; providing the potential for consistent dividend distributions.</p>
 
 									<p>There can be no assurances that these investment objectives will be met, and the achievement of any or all goals is not guaranteed.</p>
+
+							</div>
+
 							<div class="property">
 								<div class="slideshow-container">
 									<div class="slide-object slide-object-active" style="background-image:url(http://fcretrust.com/assets/urti-properties/myrtle-beach-sc001.jpg);"></div>
@@ -287,8 +313,152 @@
 	function initMap() {
 		map = new google.maps.Map(document.getElementById('map'), {
 			scrollwheel: false,
-			center: {lat: -34.397, lng: 150.644},
-			zoom: 8
+			center: {lat: 37.2831383, lng: -92.9683574},
+			zoom: 3,
+			mapTypeControl: false,
+			styles: [
+			  {
+			      "featureType": "administrative",
+			      "elementType": "labels.text.fill",
+			      "stylers": [
+			          {
+			              "color": "#444444"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "landscape",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "color": "#85adad"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "landscape.natural.terrain",
+			      "elementType": "geometry.fill",
+			      "stylers": [
+			          {
+			              "hue": "#85adad"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "landscape.natural.terrain",
+			      "elementType": "geometry.stroke",
+			      "stylers": [
+			          {
+			              "hue": "#ff0000"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "poi",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "visibility": "off"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "saturation": -100
+			          },
+			          {
+			              "lightness": 45
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "visibility": "simplified"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "geometry.fill",
+			      "stylers": [
+			          {
+			              "color": "#6b81b0"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "labels.text.fill",
+			      "stylers": [
+			          {
+			              "color": "#444444"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "labels.text.stroke",
+			      "stylers": [
+			          {
+			              "color": "#ffffff"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.arterial",
+			      "elementType": "geometry.fill",
+			      "stylers": [
+			          {
+			              "color": "#6b81b0"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.arterial",
+			      "elementType": "labels.text.fill",
+			      "stylers": [
+			          {
+			              "color": "#444444"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.arterial",
+			      "elementType": "labels.icon",
+			      "stylers": [
+			          {
+			              "visibility": "off"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "transit",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "visibility": "off"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "water",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "color": "#154b87"
+			          },
+			          {
+			              "visibility": "on"
+			          }
+			      ]
+			  }
+			],
 		});
 	}
 
@@ -320,13 +490,7 @@
 			});
 
 ///////////////GOOGLE MAPS API////////////
-var map;
-function initMap() {
-	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: -34.397, lng: 150.644},
-		zoom: 8
-	});
-}
+
 /////////////////END GOOGLE MAPS///////
 
 	});
