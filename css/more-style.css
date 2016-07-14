@@ -24,6 +24,20 @@ p{
   top:0px;
   z-index: 4;
 }
+.opportunity-text-active{
+  background: #444 !important;
+}
+.opportunity-head-active{
+  -webkit-transition: all 1.2s;
+  opacity:1 !important;
+}
+.opportunity-background{
+  -webkit-transition: background-image 1.2s;
+}
+.opportunity-background-active{
+  -webkit-transition: background-image 1.2s;
+  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event.jpg?raw=true) !important;
+}
 .dual{
   width: 40%;
   height: 200px;

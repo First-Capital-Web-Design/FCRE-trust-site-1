@@ -92,15 +92,15 @@
 		<div class="mobile-nav" style="width: 25px; height: 25px; background-image: url('https://www.newfangled.com/wp-content/uploads/2014/08/stuffcontentmgrfiles2ac67e44c30a21635f8a9d498f832bc1cmisc_resized80_313_257_hamenu.png'); background-size: 25px 25px;"></div>
 
 
-		<div id="fh5co-common-section" style="padding-top: 150px; background-color: #154b87; height: calc(100vh - 110px)">
+		<div id="fh5co-common-section" class="opportunity-background" style="padding-top: 150px; background-color: #154b87; height: calc(100vh - 110px); background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event-blue.jpg?raw=true); background-size: 100% auto; background-position: center;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="col-md-12 col-sm-12 ">
 							<span class="number-holder"></span>
 							<div class="desc">
-								<h1 style="color: orange;">The Opportunity</h1>
-								<p  style="text-align:justify; color: white;">
+								<h1 class="opportunity-head" style="border: 2px solid #444;background-color: orange; color:#444; width: 35%; padding: 20px; margin-bottom:0; opacity: .7">The Opportunity</h1>
+								<p  class="opportunity-text" style="text-align:justify; color: white; background:rgba(50, 50, 50, .7); padding: 20px;">
 									In these trying times we believe that we all need to find a way to
 									generate current income. Most smaller investors either do not allocate
 									a portion of their portfolios to real estate, or if they do, typically
@@ -251,6 +251,7 @@
 
 	<script>
 		$(document).ready(function(){
+			$(".opportunity-background").css("background-image", "url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event.jpg?raw=true) !important");
 
 			$(".mobile-nav").click(function(){
 				$("#fh5co-main-nav").toggleClass("nav-active");
@@ -262,62 +263,15 @@
 
 			});
 
-		$(".who").click(function(){
-
-			$(".page-footer").removeClass("slided");
-			$("#fh5co-main-nav").removeClass("nav-active");
-			$(".info-button-container").removeClass("nav-info-active");
-			$(".slider-button").removeClass("rotated");
-
-			if($(this).hasClass("info-button-active")){
-				$(".info-button").removeClass("info-button-active");
-				$(".info-content").removeClass("info-content-slided");
-			} else {
-			$(".info-button").removeClass("info-button-active");
-			$(".who").addClass("info-button-active");
-
-			$(".info-content").removeClass("info-content-slided");
-			$(".who-content").addClass("info-content-slided");
-		}
-		});
-
-		$(".why-us").click(function(){
-
-			$(".page-footer").removeClass("slided");
-			$("#fh5co-main-nav").removeClass("nav-active");
-			$(".info-button-container").removeClass("nav-info-active");
-			$(".slider-button").removeClass("rotated");
-
-			if($(this).hasClass("info-button-active")){
-				$(".info-button").removeClass("info-button-active");
-				$(".info-content").removeClass("info-content-slided");
-			} else {
-			$(".info-button").removeClass("info-button-active");
-			$(".why-us").addClass("info-button-active");
-
-			$(".info-content").removeClass("info-content-slided");
-			$(".why-us-content").addClass("info-content-slided");
-		}
-		});
-
-		$(".why-real-estate").click(function(){
-
-			$(".page-footer").removeClass("slided");
-			$("#fh5co-main-nav").removeClass("nav-active");
-			$(".info-button-container").removeClass("nav-info-active");
-			$(".slider-button").removeClass("rotated");
-
-			if($(this).hasClass("info-button-active")){
-				$(".info-button").removeClass("info-button-active");
-				$(".info-content").removeClass("info-content-slided");
-			} else {
-			$(".info-button").removeClass("info-button-active");
-			$(".why-real-estate").addClass("info-button-active");
-
-			$(".info-content").removeClass("info-content-slided");
-			$(".why-real-estate-content").addClass("info-content-slided");
-		}
-		});
+			$(".opportunity-text").hover(function(){
+			    $(".opportunity-background").addClass("opportunity-background-active");
+					$(".opportunity-text").addClass("opportunity-text-active");
+					$(".opportunity-head").addClass("opportunity-head-active");
+			    }, function(){
+			    $(".opportunity-background").removeClass("opportunity-background-active");
+					$(".opportunity-text").removeClass("opportunity-text-active");
+					$(".opportunity-head").removeClass("opportunity-head-active");
+			});
 
 	});
 
