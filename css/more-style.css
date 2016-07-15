@@ -1,4 +1,5 @@
-p{
+li{
+  color: grey;
 }
 .placeholder{
   background-image: url("") !important;
@@ -36,15 +37,23 @@ p{
 }
 .opportunity-background-active{
   -webkit-transition: background-image 1.2s;
-  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event.jpg?raw=true) !important;
+  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event-blue.jpg?raw=true) !important;
+}
+.arrow-full-width{
+  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/arrow-full-width.png?raw=true);
+  background-size: 100vw 80px;
+  height: 80px;
+  width: 100vw;
+  position: absolute;
+  top: calc(100vh - 20px);
 }
 .dual{
   width: 40%;
   height: 200px;
   padding: 20px 5%;
   text-align: center;
-  border: 2px solid orange;
-  color: orange;
+  border: 2px solid #154b87;
+  color: #154b87;
   float: left;
   margin: 0 5% 50px 5%;
   line-height: 28px;
@@ -57,6 +66,7 @@ p{
   color: white;
   background-color: orange;
   box-shadow: 0 0 20px 0 grey, 2px 2px 2px #ffb833 inset;
+  border: 2px solid orange;
 }
 .dual-plus{
   width: 10%;
@@ -71,7 +81,7 @@ p{
   width: calc(100% - 165px);
   float: left;
   background-color: white;
-  padding: 20px;
+  padding: 50px;
   box-shadow: 1px 1px 8px grey;
 }
 .board-member-picture{
@@ -83,8 +93,8 @@ p{
   float: left;
 }
 .board-member-header{
-  width: calc(45%);
-  padding-left: 10px;
+  width: calc(100%);
+  padding-bottom: 30px;
   height: auto;
   color: blue;
   float: left;
@@ -127,6 +137,7 @@ p{
   background-color: white;
   border-left: 8px solid grey;
   -webkit-transition: all .5s;
+  cursor: pointer;
 }
 .name+.name{
   border-top: 0;
