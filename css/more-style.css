@@ -469,6 +469,13 @@ dl a{
 .hover-orange:hover{
   color: orange !important;
 }
+.forms-container{
+  height: auto;
+  min-height: 150px;
+  width: 80%;
+  background-color: white;
+  margin-left: 10%;
+}
 .date{
   text-decoration: overline;;
 }
