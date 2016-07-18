@@ -273,6 +273,9 @@ html, body {
     margin-bottom: 0;
     outline: 4px solid orange;
 }
+.info-window{
+  background-color: pink;
+}
 .properties-head{
   background-color: orange;
   color: white;

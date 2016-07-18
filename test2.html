@@ -1228,8 +1228,8 @@
 
 
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgNgT1QqWiqcw1h0SJ0jDqnkZavxmubas&callback=initMap"
-	async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgNgT1QqWiqcw1h0SJ0jDqnkZavxmubas&callback=initMap" type="text/javascript"></script>
+
 
 	<script type="text/javascript">
 	    var locations = [
@@ -1400,8 +1400,76 @@
 				],
 	    });
 
+	    var infowindow = new google.maps.InfoWindow();
 
+	    var marker, i;
+
+	    for (i = 0; i < locations.length; i++) {
+	      marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+	        map: map
+	      });
+
+	      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	        return function() {
+	          infowindow.setContent(locations[i][0]);
+	          infowindow.open(map, marker);
+	        }
+	      })(marker, i));
+	    }
 	  </script>
+
+	<script>
+		$(document).ready(function(){
+
+			$(".mobile-nav").click(function(){
+				$("#fh5co-main-nav").toggleClass("nav-active");
+				$(".info-button-container").toggleClass("nav-info-active");
+				$(".info-content").removeClass("info-content-slided");
+				$(".info-button").removeClass("info-button-active");
+				$(".page-footer").removeClass("slided");
+				$(".slider-button").removeClass("rotated");
+
+			});
+
+			$(".continue-button").click(function(){
+
+				$("body").removeClass("no-scroll");
+				$(".terms-agree-container").remove();
+
+			});
+
+			$(".slide-object").click(function(){
+
+				$(this).siblings().removeClass("slide-object-active");
+				$(this).addClass("slide-object-active");
+
+			});
+
+			$(".icon-head").click(function(){
+
+				$(this).parent().children(".property-icon-content").css("display","block");
+
+			});
+
+			$(".icon-overlay").click(function(){
+
+				$(this).parent().children(".property-icon-content").css("display","block");
+				$(".property-icon-content-scroll").scrollTop(0);
+				$("body").addClass("no-scroll");
+
+			});
+
+			$(".remove").click(function(){
+
+				$(this).parent().parent().css("display", "none");
+				$("body").removeClass("no-scroll");
+
+			});
+
+	});
+
+	</script>
 
 	</body>
 </html>

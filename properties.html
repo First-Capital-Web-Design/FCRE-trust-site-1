@@ -185,10 +185,10 @@
 					<div class="col-md-12 col-sm-12 ">
 						<span class="number-holder"></span>
 						<div class="desc">
-							<div class="properties-head">THE PROPERTIES</div>
+							<a id="property-scroll"><div class="properties-head">THE PROPERTIES</div></a>
 						<div class="property-icon-container">
 <!--Myrtle Beach-->
-							<div class="property-icon first-property-icon" style="background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/medical-office-sc-blue.jpg?raw=true)"><div class="icon-overlay" style="background-image:url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/medical-office-sc-color.jpg?raw=true)"></div><div class="icon-head"><h4>MEDICAL OFFICE<h4><p>Myrtle Beach, South Carolina<p></div>
+							<div class="property-icon first-property-icon myrtle-beach-property" style="background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/medical-office-sc-blue.jpg?raw=true)"><div class="icon-overlay" style="background-image:url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/medical-office-sc-color.jpg?raw=true)"></div><div class="icon-head"><h4>MEDICAL OFFICE<h4><p>Myrtle Beach, South Carolina<p></div>
 								<div class="property-icon-content">
 
 								<div class="tab">Medical Complex at 82nd Parkway<div class="remove">☒</div></div>
@@ -1228,12 +1228,36 @@
 
 
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgNgT1QqWiqcw1h0SJ0jDqnkZavxmubas&callback=initMap"
-	async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgNgT1QqWiqcw1h0SJ0jDqnkZavxmubas&callback=initMap" type="text/javascript"></script>
+
 
 	<script type="text/javascript">
+
+	////////smooth scroll
+	function smoothScroll() {
+
+		var $root = $('html, body');
+		$('a').click(function() {
+		    var href = $.attr(this, 'href');
+		    $root.animate({
+		        scrollTop: $(href).offset().top
+		    }, 500, function () {
+					console.log(this);
+					if($(this).parent().hasClass("myrtle")){$(".myrtle-beach-property").children(".property-icon-content").css("display", "block");}
+
+		    });
+		    return false;
+		});
+
+		// $(".myrtle").click(function(){
+		// 	$(".myrtle-beach-property").children(".property-icon-content").css("display", "block");
+		// });
+
+	}
+	////////end smooth scroll
+
 	    var locations = [
-	      ['Medical Office - Myrtle Beach, SC', 33.7197258, -78.9488477, 4],
+	      ['<div class="myrtle"><a href="#property-scroll" class="myrtle">Medical Office - Myrtle Beach, SC</a></div>', 33.7197258, -78.9488477, 4],
 	      ['Tilden House - Brooklyn, NY', 40.6464233, -73.95552, 5],
 	      ['Medical Office - Cherry Hill, NJ', 39.917616, -74.964762, 3],
 	      ['American Airlines - Winston-Salem, NC', 36.0618776, -80.3099189, 2],
@@ -1398,6 +1422,8 @@
 				      ]
 				  }
 				],
+				scrollwheel: false,
+				mapTypeControl: false,
 	    });
 
 	    var infowindow = new google.maps.InfoWindow();
@@ -1414,16 +1440,21 @@
 	        return function() {
 	          infowindow.setContent(locations[i][0]);
 	          infowindow.open(map, marker);
+						smoothScroll();
 	        }
 	      })(marker, i));
 	    }
+
 	  </script>
 
 	<script>
-
-
-
 		$(document).ready(function(){
+
+
+			$(function() {
+
+			    smoothScroll();
+			});
 
 			$(".mobile-nav").click(function(){
 				$("#fh5co-main-nav").toggleClass("nav-active");
