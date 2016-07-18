@@ -36,7 +36,7 @@ a:focus, a:active {
 p, span {
   margin-bottom: 1.5em;
   font-size: 20px;
-  color: #727272;
+  color: #444;
   font-weight: 300;
   font-family: "brandon-grotesque", Arial, serif;
 }
@@ -187,6 +187,7 @@ header #fh5co-main-nav > ul li a.active:before {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
 }
+
 header #fh5co-main-nav > ul li a:hover, header #fh5co-main-nav > ul li a:focus {
   text-decoration: none;
   color: orange;
