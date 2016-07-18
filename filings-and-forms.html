@@ -78,8 +78,8 @@
 
 						<li><a href="about.html">About</a></li>
 						<li><a href="properties.html">Properties</a></li>
-						<li><a href="investing-in-real-estate.html" class="active">Investing In Real Estate</a></li>
-						<li><a href="filings-and-forms.html">Filings And Forms</a></li>
+						<li><a href="investing-in-real-estate.html">Investing In Real Estate</a></li>
+						<li><a href="filings-and-forms.html" class="active">Filings And Forms</a></li>
 						<li><a href="announcements.html">Announcements</a></li>
 
 					</ul>
@@ -98,17 +98,27 @@
 						<div class="col-md-12 col-sm-12 ">
 							<span class="number-holder"></span>
 							<div class="desc investing">
-								<h2 style="text-align:center; color: #154b87; width: 500px; margin-left: calc(50% - 250px); padding: 20px; margin-bottom:30px; background-color: orange;">REAL ESTATE AS AN ASSET CLASS</h2>
+								<h2 style="text-align:center; color: #154b87; width: 500px; margin-left: calc(50% - 250px); padding: 20px; margin-bottom:30px; background-color: orange;">FILINGS AND FORMS</h2>
 
 								<div class="forms-container">
-									<div class="form-object"></div>
+
+									<div class="form-tab-container">
+										<div class="form-tab prospectus-tab">Prospectus & Supplements</div>
+										<div class="form-tab form-tab-active sec-tab">SEC Filings</div>
+										<div class="form-tab xbrl-tab">XBRL Exhibits</div>
+										<div class="form-tab">Corporate Governance</div>
+										<div class="form-tab">Materials & Forms</div>
+								</div>
+
+							<div class="form-object-container">
+								<div class="form-object"></div>
+							</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="arrow-full-width" style="position: absolute; bottom: 0; left: 0; top: auto;"></div>
 		</div><!-- end fh5co-common-section -->
 
 		<div style="background-color: #154b87; height: 40px !important;">
@@ -183,6 +193,7 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 	<script src="js/script.js"> </script>
+	<script src="js/filings.js"> </script>
 
 	<script>
 		$(document).ready(function(){
@@ -197,62 +208,11 @@
 
 			});
 
-		$(".who").click(function(){
-
-			$(".page-footer").removeClass("slided");
-			$("#fh5co-main-nav").removeClass("nav-active");
-			$(".info-button-container").removeClass("nav-info-active");
-			$(".slider-button").removeClass("rotated");
-
-			if($(this).hasClass("info-button-active")){
-				$(".info-button").removeClass("info-button-active");
-				$(".info-content").removeClass("info-content-slided");
-			} else {
-			$(".info-button").removeClass("info-button-active");
-			$(".who").addClass("info-button-active");
-
-			$(".info-content").removeClass("info-content-slided");
-			$(".who-content").addClass("info-content-slided");
-		}
-		});
-
-		$(".why-us").click(function(){
-
-			$(".page-footer").removeClass("slided");
-			$("#fh5co-main-nav").removeClass("nav-active");
-			$(".info-button-container").removeClass("nav-info-active");
-			$(".slider-button").removeClass("rotated");
-
-			if($(this).hasClass("info-button-active")){
-				$(".info-button").removeClass("info-button-active");
-				$(".info-content").removeClass("info-content-slided");
-			} else {
-			$(".info-button").removeClass("info-button-active");
-			$(".why-us").addClass("info-button-active");
-
-			$(".info-content").removeClass("info-content-slided");
-			$(".why-us-content").addClass("info-content-slided");
-		}
-		});
-
-		$(".why-real-estate").click(function(){
-
-			$(".page-footer").removeClass("slided");
-			$("#fh5co-main-nav").removeClass("nav-active");
-			$(".info-button-container").removeClass("nav-info-active");
-			$(".slider-button").removeClass("rotated");
-
-			if($(this).hasClass("info-button-active")){
-				$(".info-button").removeClass("info-button-active");
-				$(".info-content").removeClass("info-content-slided");
-			} else {
-			$(".info-button").removeClass("info-button-active");
-			$(".why-real-estate").addClass("info-button-active");
-
-			$(".info-content").removeClass("info-content-slided");
-			$(".why-real-estate-content").addClass("info-content-slided");
-		}
-		});
+			// $(".form-tab").click(function(){
+			//
+			// 	$(".form-tab").removeClass("form-tab-active");
+			// 	$(this).addClass("form-tab-active");
+			// });
 
 	});
 

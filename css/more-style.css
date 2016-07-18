@@ -76,6 +76,7 @@ li{
   border-radius: 5px;
   font-size: 1.5vw;
   box-sizing: border-box;
+  background: #d1e0e0;
 }
 .dual:hover{
   color: white;
@@ -142,6 +143,48 @@ li{
   float: left;
   text-align: center;
   line-height: 26px;
+}
+.forms-container{
+  height: auto;
+  min-height: 150px;
+  width: 100%;
+  background-color: white;
+  margin-left: 0%;
+  position: relative;
+  margin-top: 100px;
+  border-top: 2px solid grey;
+}
+.form-tab-container{
+  position: absolute;
+  top: -50px;
+  height: 50px;
+  width: 100%;
+}
+.form-tab{
+  width: auto;
+  height: 100%;
+  float: left;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  background-color: white;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  cursor: pointer;
+  box-shadow: 0 -13px 8px -10px lightgrey inset;
+}
+.form-tab-active{
+  border-bottom: 2px solid white;
+  box-shadow: none;
+}
+.form-object{
+  width: 100%;
+  height: 100px;
+  padding: 30px;
+  color: orange;
+}
+.form-object + .form-object{
+  border-top: 2px solid grey;
 }
 .name{
   width: 100%;
@@ -468,13 +511,6 @@ dl a{
 }
 .hover-orange:hover{
   color: orange !important;
-}
-.forms-container{
-  height: auto;
-  min-height: 150px;
-  width: 80%;
-  background-color: white;
-  margin-left: 10%;
 }
 .date{
   text-decoration: overline;;
