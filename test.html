@@ -1,0 +1,198 @@
+<html>
+<head>
+
+  <title>Google Maps Multiple Markers</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgNgT1QqWiqcw1h0SJ0jDqnkZavxmubas&callback=initMap" type="text/javascript"></script>
+</head>
+<body>
+  <div id="map" style="height: 400px; width: 500px;">
+</div>
+<script type="text/javascript">
+    var locations = [
+      ['Medical Office - Myrtle Beach, SC', 33.7197258, -78.9488477, 4],
+      ['Tilden House - Brooklyn, NY', 40.6464233, -73.95552, 5],
+      ['Medical Office - Cherry Hill, NJ', 39.917616, -74.964762, 3],
+      ['American Airlines - Winston-Salem, NC', 36.0618776, -80.3099189, 2],
+      ['Single Tenant Office – MARLTON, NJ', 39.8837192, -74.9271178, 1],
+      ['14 Highland Avenue - Yonkers, New York', 40.924327, -73.8985037, 1],
+      ['Ramada Hotel - Columbia, SC', 34.0761957, -80.9503418, 1],
+      ['Wyndham Garden Inn- Amarillo, TX', 35.1957506, -101.8730253, 1]
+
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: new google.maps.LatLng(37.2831383, -73.9683574),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles:  [
+				{
+	featureType: "all",
+	elementType: "labels",
+	stylers: [
+		{ visibility: "off" }
+	]
+},
+			  {
+			      "featureType": "administrative",
+			      "elementType": "labels.text.fill",
+			      "stylers": [
+			          {
+			              "color": "#444444"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "landscape",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "color": "#85adad"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "landscape.natural.terrain",
+			      "elementType": "geometry.fill",
+			      "stylers": [
+			          {
+			              "hue": "#85adad"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "landscape.natural.terrain",
+			      "elementType": "geometry.stroke",
+			      "stylers": [
+			          {
+			              "hue": "#ff0000"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "poi",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "visibility": "off"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "saturation": -100
+			          },
+			          {
+			              "lightness": 45
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "visibility": "simplified"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "geometry.fill",
+			      "stylers": [
+			          {
+			              "color": "#6b81b0"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "labels.text.fill",
+			      "stylers": [
+			          {
+			              "color": "#444444"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "labels.text.stroke",
+			      "stylers": [
+			          {
+			              "color": "#ffffff"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.arterial",
+			      "elementType": "geometry.fill",
+			      "stylers": [
+			          {
+			              "color": "#6b81b0"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.arterial",
+			      "elementType": "labels.text.fill",
+			      "stylers": [
+			          {
+			              "color": "#444444"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "road.arterial",
+			      "elementType": "labels.icon",
+			      "stylers": [
+			          {
+			              "visibility": "off"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "transit",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "visibility": "off"
+			          }
+			      ]
+			  },
+			  {
+			      "featureType": "water",
+			      "elementType": "all",
+			      "stylers": [
+			          {
+			              "color": "#154b87"
+			          },
+			          {
+			              "visibility": "on"
+			          }
+			      ]
+			  }
+			],
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+</body>
+</html>
