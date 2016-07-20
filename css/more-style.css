@@ -827,6 +827,9 @@ tr, td{
   overflow: scroll;
   padding: 10px;
 }
+.icon-head h4{
+  font-size: 12px;
+}
 .tiny-table{
   font-size: 10px !important;
 }
@@ -837,5 +840,9 @@ tr, td{
 .remove{
   background-color: #b3cccc;
   box-shadow: -5px 0 30px 20px #b3cccc;
+}
+.row{
+  margin-left: 0;
+  margin-right: 0;
 }
 }
