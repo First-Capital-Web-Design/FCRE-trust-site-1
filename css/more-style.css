@@ -827,8 +827,15 @@ tr, td{
   overflow: scroll;
   padding: 10px;
 }
+.property-icon{
+  height: 140px;
+}
+.icon-head{
+  padding: 5px;
+  height: 47px;
+}
 .icon-head h4{
-  font-size: 12px;
+  font-size: 11px;
 }
 .tiny-table{
   font-size: 10px !important;
