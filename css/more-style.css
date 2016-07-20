@@ -872,6 +872,9 @@ h2{
   height: auto;
   float: left;
 }
+.form-tab-active{
+  border-bottom: 2px solid grey;
+}
 .form-tab{
   width: 100%;
   height: 100%;
@@ -883,6 +886,7 @@ h2{
 }
 .form-head{
   float: left;
+  width: 100%;
 }
 .form-object{
   height: auto;
