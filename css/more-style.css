@@ -28,6 +28,24 @@ h2{
   top:20px;
   z-index: 4;
 }
+.opportunity-background{
+  padding-top: 150px;
+}
+.opportunity-head{
+  width: 35%;
+  border: 2px solid #444;
+  background-color: orange;
+  color:#444;
+  padding: 20px;
+  margin-bottom:0;
+  opacity: .7;
+}
+.opportunity-text{
+  text-align:justify;
+  color: white;
+  background:rgba(50, 50, 50, .7);
+  padding: 20px;
+}
 .opportunity-text-active{
   background: #444 !important;
 }
@@ -741,7 +759,17 @@ dl a{
 .page-head-container{
   margin-top: 0px;
 }
-
+.opportunity-background{
+  padding-top: 20px;
+}
+.opportunity-head{
+  width: 100%;
+  opacity: .85;
+}
+.opportunity-text{
+  font-size: 10px;
+  background:rgba(50, 50, 50, .85);
+}
 .property-icon{
   width: 46.5%;
   background-size: auto 100%;
