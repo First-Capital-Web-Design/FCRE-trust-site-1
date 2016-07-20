@@ -273,9 +273,6 @@ html, body {
     margin-bottom: 0;
     outline: 4px solid orange;
 }
-.info-window{
-  background-color: pink;
-}
 .properties-head{
   background-color: orange;
   color: white;
@@ -376,7 +373,7 @@ border-right: 200px solid transparent;
   right: 8px;
   top: -10px;
   font-size: 35px;
-  color: red;
+  color: white;
   font-weight: 500;
 }
 td, th {
@@ -658,6 +655,7 @@ dl a{
     left: 0;
     width: 272px;
     height: 60px;
+    top: 30px;
   }
 
   header .fh5co-navbar-brand {
@@ -703,7 +701,7 @@ dl a{
     padding: 0;
   }
   .nav-active{
-    height: 80px !important;
+    height: 140px !important;
   }
   .nav-info-active{
     top: 190px !important;
