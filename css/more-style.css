@@ -861,4 +861,37 @@ h2{
 #fh5co-common-section{
   padding-bottom: 50px;
 }
+.forms-container{
+  box-shadow: 0 5px lightgrey inset;
+  border-top: 0px solid transparent;
+  margin-top: 50px;
+}
+.form-tab-container{
+  position: relative;
+  top: auto;
+  height: auto;
+  float: left;
+}
+.form-tab{
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  margin-bottom: -4px;
+}
+.form-head{
+  float: left;
+}
+.form-object{
+  height: auto;
+  padding: 15px;
+  color: orange;
+  font-size: 13px;
+  line-height: 18px;
+  float: left;
+  background-color: white;
+}
+
 }
