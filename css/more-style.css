@@ -651,11 +651,11 @@ dl a{
   }
 
   .logo{
-    margin-left: calc(50% - 136px);
+    margin-left: calc(50% - 100px);
     left: 0;
-    width: 272px;
-    height: 60px;
-    top: 30px;
+    width: 200px;
+    height: 42px;
+    top: 40px;
   }
 
   header .fh5co-navbar-brand {
@@ -682,8 +682,8 @@ dl a{
   .mobile-nav{
     display: block;
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 10px;
+    top: 10px;
     width: 20px;
     height: 20px;
     z-index: 6;
@@ -713,7 +713,7 @@ dl a{
 
   .page-footer h3 {
     font-size: 15px;
-    line-height: 0;
+    line-height: 1;
  }
 
  .page-footer{
@@ -763,12 +763,11 @@ dl a{
   margin-bottom: 60px;
   height: 125px;
   padding-top: 24px;
-
-position: relative;
-color: white;
-letter-spacing: 0.2em;
-text-align: center;
-text-transform: uppercase;
+  position: relative;
+  color: white;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
 }
 .properties-head:after{
   content: "";
@@ -851,5 +850,15 @@ tr, td{
 .row{
   margin-left: 0;
   margin-right: 0;
+}
+header, #fh5co-intro-section, #fh5co-services-section, #fh5co-featured-work-section, #fh5co-common-section, #fh5co-blog-section, #footer, #fh5co-contact-section, #fh5co-work-section{
+  padding-bottom:0;
+  }
+h2{
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+#fh5co-common-section{
+  padding-bottom: 50px;
 }
 }
