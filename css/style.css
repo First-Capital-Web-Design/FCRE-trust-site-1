@@ -192,7 +192,6 @@ header #fh5co-main-nav > ul li a:hover, header #fh5co-main-nav > ul li a:focus {
   text-decoration: none;
   color: orange;
   cursor: pointer;
-  border-bottom: 2px solid orange;
 }
 header #fh5co-main-nav > ul li:first-child {
   margin-left: 0;

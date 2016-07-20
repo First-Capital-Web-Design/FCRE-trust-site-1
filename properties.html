@@ -72,7 +72,7 @@
 		<header style="background-color: white; box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);">
 			<div class="container text-center">
 				<div class="fh5co-navbar-brand">
-					<a href="index.html"><div class="placeholder"></div></a>
+					<a href="about.html"><div class="placeholder"></div></a>
 				</div>
 				<nav id="fh5co-main-nav" role="navigation">
 					<ul>
@@ -187,6 +187,8 @@
 						<div class="desc">
 							<a id="property-scroll"><div class="properties-head">THE PROPERTIES</div></a>
 						<div class="property-icon-container">
+							<div class="pop-up-background"></div>
+
 <!--Myrtle Beach-->
 							<div class="property-icon first-property-icon myrtle-beach-property" style="background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/medical-office-sc-blue.jpg?raw=true)"><div class="icon-overlay" style="background-image:url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/medical-office-sc-color.jpg?raw=true)"></div><div class="icon-head"><h4>MEDICAL OFFICE<h4><p>Myrtle Beach, South Carolina<p></div>
 								<div class="property-icon-content myrtle-content">
@@ -1241,9 +1243,12 @@
 		var $root = $('html, body');
 		$('a').click(function() {
 		    var href = $.attr(this, 'href');
+				$(".property-icon-content").css("opacity","0");
 		    $root.animate({
 		        scrollTop: $(href).offset().top
-		    }, 500, function () {
+		    }, 800, function () {
+					$(".property-icon-content").css("opacity","1");
+					$(".pop-up-background").addClass("pop-up-background-active");
 					if($(this).hasClass("myrtle")){$(".myrtle-beach-property").children(".property-icon-content").css("display", "block");}
 
 		    });
@@ -1253,7 +1258,7 @@
 		$(".map-button").click(function(){
 
 			console.log(this);
-			
+
 			$("body").addClass("no-scroll");
 
 			if($(this).hasClass("myrtle")){
@@ -1469,10 +1474,6 @@
 
 	    }
 
-
-	  </script>
-
-	<script>
 		$(document).ready(function(){
 
 
@@ -1508,6 +1509,9 @@
 			$(".icon-head").click(function(){
 
 				$(this).parent().children(".property-icon-content").css("display","block");
+				$(".property-icon-content-scroll").scrollTop(0);
+				$("body").addClass("no-scroll");
+				$(".pop-up-background").addClass("pop-up-background-active");
 
 			});
 
@@ -1516,12 +1520,22 @@
 				$(this).parent().children(".property-icon-content").css("display","block");
 				$(".property-icon-content-scroll").scrollTop(0);
 				$("body").addClass("no-scroll");
+				$(".pop-up-background").addClass("pop-up-background-active");
 
 			});
 
 			$(".remove").click(function(){
 
 				$(this).parent().parent().css("display", "none");
+				$("body").removeClass("no-scroll");
+				$(".pop-up-background").removeClass("pop-up-background-active");
+
+			});
+
+			$(".pop-up-background").click(function(){
+
+				$(".property-icon-content").css("display", "none");
+				$(".pop-up-background").removeClass("pop-up-background-active");
 				$("body").removeClass("no-scroll");
 
 			});

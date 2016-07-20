@@ -22,7 +22,7 @@ var sec = "<div class='form-head'><h3>SEC Filings - First Capital Real Estate Tr
                    "<div class='form-object'>8-K     Filing Date: 2015-10-09 Report for corporate changes or financial reports for unscheduled events.</div>" +
                    "<div class='form-object'>8-K/A     Filing Date: 2015-09-25 Report for corporate changes or financial reports for unscheduled events.</div>" +
                    "<div class='form-object'>8-K     Filing Date: 2015-09-21 Report for corporate changes or financial reports for unscheduled events.</div>" +
-                   "<div class='form-object'>10-Q     Filing Date: 2015-06-30 Comprehensive quarterly financial report filed with the SEC.</div>" ;
+                   "<div class='form-object'>10-Q     Filing Date: 2015-06-30 Comprehensive quarterly financial report filed with the SEC.</div>";
 
 var xbrl = "<div class='form-head'><h3>Download XBRL Exhibits - First Capital Real Estate Trust Incorporated</h3></div>" +
           "<div class='form-object'>10-Q Q1 2015 Filing Date 2015-05-20</div>" +
