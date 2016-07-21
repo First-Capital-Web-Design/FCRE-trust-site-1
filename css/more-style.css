@@ -1,9 +1,13 @@
 li{
   color: #444;
+  font-size: 17px;
 }
 h2{
   box-shadow: 1px 1px 8px -2px #444;
   background-color: white;
+}
+p{
+  font-size: 17px;
 }
 .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading p, .wf-loading li, .wf-loading{
  visibility: hidden;
@@ -44,16 +48,20 @@ h2{
 }
 .opportunity-text{
   text-align:justify;
-  color:#154b87;
+  color: white;
   padding: 20px;
-  border-top: 2px solid #154b87;
-  border: 2px solid #154b87;
+  border: 2px solid white;
   box-shadow: 1px 1px 8px -2px #444;
-  background-color: white;
+  font-size: 19px;
+  width: 50%;
+  -webkit-transition: all .8s;
 }
 .opportunity-head-active{
   -webkit-transition: all 1.2s;
   opacity:1 !important;
+}
+.opportunity-text-active{
+  background-color: #444;
 }
 .opportunity-background{
   -webkit-transition: background-image 1.2s;
@@ -77,8 +85,12 @@ h2{
 .opportunity-background-blue-active{
   opacity: 1;
 }
+.section-head{
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
 .daily-nav{
-  background-color: orange;
+  background-color: #154b87;
   color: white;
   width: auto;
   height: 100px;
@@ -622,6 +634,9 @@ dl a{
     padding-bottom: 0;
     height: 110px;
   }
+  header #fh5co-main-nav > ul li a {
+    font-size: 1.5vw;
+  }
 }
 @media (max-width: 999px) {
   .logo{
@@ -1025,5 +1040,13 @@ h2{
   float: left;
   background-color: white;
 }
-
+.dual{
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+}
+.dual-plus{
+  width: 100%;
+  font-size: 60px;
+}
 }
