@@ -4,6 +4,9 @@ li{
 h2{
   box-shadow: 1px 1px 8px -2px #444;
 }
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading p, .wf-loading li, .wf-loading{
+ visibility: hidden;
+}
 .placeholder{
   background-image: url("") !important;
   background-size: 100% 100%;
