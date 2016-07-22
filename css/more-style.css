@@ -52,9 +52,11 @@ p{
   padding: 20px;
   border: 2px solid white;
   box-shadow: 1px 1px 8px -2px #444;
-  font-size: 19px;
-  width: 50%;
+  font-size: 22px;
+  width: 80%;
   -webkit-transition: all .8s;
+  margin-left: 10%;
+  line-height: 30px;
 }
 .opportunity-head-active{
   -webkit-transition: all 1.2s;
@@ -108,7 +110,26 @@ p{
 .investor-letter{
   position: absolute;
   left: 20px;
-  top: calc(100vh - 40px);
+  top: calc(165px);
+  width: 26px;
+  -webkit-transition: width .8s;
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.prospectus{
+  position: absolute;
+  left: 20px;
+  top: calc(125px);
+  width: 28px;
+  -webkit-transition: width .8s;
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.investor-letter:hover, .prospectus:hover{
+  width: 200px;
+  -webkit-transition: width .8s;
 }
 .arrow-full-width{
   background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/arrow-full-width.png?raw=true);
