@@ -107,29 +107,30 @@ p{
   box-shadow: 1px 1px 8px -2px #444;
   -webkit-transition: all .8s;
 }
-.investor-letter{
+.investor-letter a{
   position: absolute;
-  left: 20px;
-  top: calc(165px);
-  width: 26px;
-  -webkit-transition: width .8s;
+  right: 20px;
+  top: calc(125px);
+  width: auto;
+  -webkit-transition: color .8s;
   height: 40px;
   white-space: nowrap;
   overflow: hidden;
+  color: white;
 }
-.prospectus{
+.prospectus a{
   position: absolute;
   left: 20px;
   top: calc(125px);
-  width: 28px;
-  -webkit-transition: width .8s;
+  width: auto;
+  -webkit-transition: color .8s;
   height: 40px;
   white-space: nowrap;
   overflow: hidden;
+  color: white;
 }
-.investor-letter:hover, .prospectus:hover{
-  width: 200px;
-  -webkit-transition: width .8s;
+.investor-letter a:hover, .prospectus a:hover{
+  color: orange !important;
 }
 .arrow-full-width{
   background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/arrow-full-width.png?raw=true);
