@@ -49,7 +49,6 @@ p{
 .opportunity-text{
   text-align:justify;
   color: white;
-  padding: 20px;
   border: 2px solid white;
   box-shadow: 1px 1px 8px -2px #444;
   font-size: 22px;
@@ -57,12 +56,19 @@ p{
   -webkit-transition: all .8s;
   margin-left: 10%;
   line-height: 30px;
+  position: relative;
+  overflow: visible;
 }
 .opportunity-head-active{
   -webkit-transition: all 1.2s;
   opacity:1 !important;
 }
-.opportunity-text-active{
+.opportunity-text-hover{
+  background-color: transparent;
+  padding: 20px;
+}
+.opportunity-text-hover:hover{
+  -webkit-transition: all .7s ease;
   background-color: #444;
 }
 .opportunity-background{
@@ -109,28 +115,28 @@ p{
 }
 .investor-letter a{
   position: absolute;
-  right: 20px;
-  top: calc(125px);
+  left: 200px;
+  bottom: -55px;
   width: auto;
   -webkit-transition: color .8s;
-  height: 40px;
+  height: 45px;
   white-space: nowrap;
   overflow: hidden;
   color: white;
 }
 .prospectus a{
   position: absolute;
-  left: 20px;
-  top: calc(125px);
+  left: 0px;
+  bottom: -55px;
   width: auto;
   -webkit-transition: color .8s;
-  height: 40px;
+  height: 45px;
   white-space: nowrap;
   overflow: hidden;
   color: white;
 }
 .investor-letter a:hover, .prospectus a:hover{
-  color: orange !important;
+  color: #154b87 !important;
 }
 .arrow-full-width{
   background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/arrow-full-width.png?raw=true);
@@ -139,6 +145,7 @@ p{
   width: 100vw;
   position: absolute;
   top: calc(100vh - 20px);
+  z-index: 5;
 }
 .dual{
   width: 40%;
@@ -576,7 +583,7 @@ td .tiny-table{
 }
 .slideshow-container{
   width: 100%;
-  height: 248px;
+  height: 268px;
   margin-bottom: 20px;
 
 }
@@ -584,7 +591,7 @@ td .tiny-table{
   width: 20%;
   height: 100%;
   background-size: 100% auto;
-  background-position: bottom;
+  background-position: bottom left;
   background-repeat: no-repeat;
   float: left;
   height: 50%;
@@ -890,14 +897,16 @@ dl a{
 }
 .opportunity-background{
   padding-top: 20px;
-  height: calc(100vh - 59px);
+  height: auto !important;
+  min-height: calc(100vh - 59px);
 }
 .opportunity-head{
   width: 100%;
   opacity: .85;
 }
 .opportunity-text{
-  font-size: 10px;
+  font-size: 13px;
+  line-height: 22px;
   background:rgba(50, 50, 50, .85);
 }
 .dual{
@@ -1069,5 +1078,16 @@ h2{
 .dual-plus{
   width: 100%;
   font-size: 60px;
+}
+.daily-nav{
+  width: 100%;
+  right:0;
+  bottom:0 !important;
+  position: absolute;
+  box-shadow: 0 60px 0 #154b87 !important;
+  z-index: 4;
+}
+.opportunity-background{
+  background-size: auto 100% !important;
 }
 }
