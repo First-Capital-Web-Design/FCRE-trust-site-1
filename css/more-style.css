@@ -961,10 +961,21 @@ dl a{
 }
 .board-member-header{
   width: calc(100%);
-  padding: 10px;
+  padding: 0px;
   height: auto;
   color: blue;
   float: left;
+}
+.board-member-header h1{
+  font-size: 30px;
+  line-height: 35px;
+  color: #154b87;
+}
+.board-member-header h2{
+  font-size: 15px;
+  color: grey;
+  line-height: 0;
+  margin-top: -20px;
 }
 .board-member-info p{
   font-size: 13px;
