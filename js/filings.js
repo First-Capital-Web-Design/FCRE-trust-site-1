@@ -86,18 +86,19 @@ var xbrl =        "<div class='form-head'><h3>Download XBRL Exhibits - First Cap
                   "<div class='form-object'><a href='#'>10-K 2012</a> <p>Filing Date 2013-03-29</p></div>" +
                   "<div class='form-object'><a href='#'>10-Q Q4 2012</a> <p>Filing Date 2012-11-14</p></div>" ;
 
-var corporateGovernance = "<div class='form-head'><h3>Corporate Charter</h3></div>" +
-           "<div class='form-object'><a href='#'>Download URTI Articles of Amendment and Restatement</a> <p>July 15th 2014</p></div>" +
-           "<div class='form-object'><a href='#'>Download URTI Articles of Amendment and Restatement</a> <p>June 13th 2013</p></div>" +
-           "<div class='form-head'><h3>Committee Charters</h3></div>" +
-           "<div class='form-object'><a href='#'>Download Audit Committee Charter</a> <p>Filing Date: 2013-04-30</p></div>" +
-           "<div class='form-object'><a href='#'>Download Compensation Committee Charter</a> <p>Filing Date: 2013-04-30</p></div>" ;
+var corporateGovernance =
+                 "<div class='form-head'><h3>Corporate Charter</h3></div>" +
+                 "<div class='form-object'><a href='#'>Download URTI Articles of Amendment and Restatement</a> <p>July 15th 2014</p></div>" +
+                 "<div class='form-object'><a href='#'>Download URTI Articles of Amendment and Restatement</a> <p>June 13th 2013</p></div>" +
+                 "<div class='form-head'><h3>Committee Charters</h3></div>" +
+                 "<div class='form-object'><a href='#'>Download Audit Committee Charter</a> <p>Filing Date: 2013-04-30</p></div>" +
+                 "<div class='form-object'><a href='#'>Download Compensation Committee Charter</a> <p>Filing Date: 2013-04-30</p></div>" ;
 
 var materialsAndForms = "<div class='form-head'><h3>Forms</h3></div>" +
-          "<div class='form-object'><a>Download     Form 8937 - 2014</div>" +
-          "<div class='form-object'>Download     Form 8937 - 2013</div>" +
-          "<div class='form-object'>Download     Subscription Agreement</div>" +
-          "<div class='form-object'>Download     Additional Subscription Agreement</div>" ;
+          "<div class='form-object'><a href='#'>Download Form 8937 - 2014</a></div>" +
+          "<div class='form-object'><a href='#'>Download Form 8937 - 2013</a></div>" +
+          "<div class='form-object'><a href='#'>Download Subscription Agreement</a></div>" +
+          "<div class='form-object'><a href='#'>Download Additional Subscription Agreement</a></div>" ;
 
 
         $(".form-tab").click(function(){
