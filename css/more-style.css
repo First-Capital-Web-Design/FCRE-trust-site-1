@@ -277,7 +277,7 @@ html, body {
   z-index: 4;
   bottom: 0;
   left:0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .terms-agree-content{
   background: white;
