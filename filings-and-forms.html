@@ -67,7 +67,7 @@
 	<script src="js/jquery.scrollUp.min.js"> </script>
 
 	</head>
-	<body class="no-scroll">
+	<body>
 		<header style="background-color: white; box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);">
 			<div class="container text-center">
 				<div class="fh5co-navbar-brand">
@@ -331,9 +331,9 @@
 
 			$(".continue-button").click(function(){
 
-				console.log($("input:empty").length);
+				console.log($("input:valid").length);
 
-				if($("input:empty").length == 0){
+				if($("input:valid").length == 3){
 				 $("body").removeClass("no-scroll");
 				 $(".terms-agree-container").css("display","none");
 				 localStorage.setItem('termsAgree','shown')
@@ -342,6 +342,7 @@
 			});
 
 			if(localStorage.getItem('termsAgree') != 'shown'){
+					$("body").addClass("no-scroll");
 					$(".terms-agree-container").css("display","block");
 					$(".terms-agree-content").css("display","block");
 	    }
