@@ -189,7 +189,7 @@ html, body {
 }
 .board-info-container{
   height: auto;
-  width: calc(100% - 165px);
+  width: calc(100% - 200px);
   float: left;
   background-color: white;
   padding: 50px;
@@ -234,7 +234,7 @@ html, body {
 .board-members-container{
   height: 300px;
   padding-top: 140px;
-  width: 165px;
+  width: 200px;
   float: left;
   text-align: center;
   line-height: 26px;
@@ -258,7 +258,7 @@ html, body {
   border-left-color: orange;
   padding-right: 20px;
   margin-left: -10px;
-  width: 185px;
+  width: 215px;
 }
 .background-fixed{
   position: fixed;
