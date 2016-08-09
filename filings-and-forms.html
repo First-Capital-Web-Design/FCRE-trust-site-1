@@ -156,7 +156,7 @@
 						     </fieldset>
 
 						     <fieldset class="pure-group">
-						       <label for="email">Your Email Address:</label>
+						       <label for="email">Email Address:</label>
 						       <input id="email" name="email" type="email" value=""
 						       required placeholder=""/>
 						       <span id="email-invalid" style="visibility:hidden">
@@ -164,7 +164,7 @@
 						     </fieldset>
 
 						     <button class="button-success pure-button button-xlarge continue-button">
-						       <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+						       <i class="fa fa-paper-plane"></i>Continue</button>
 
 						   </form>
 
@@ -331,9 +331,13 @@
 
 			$(".continue-button").click(function(){
 
+				console.log($("input:empty").length);
+
+				if($("input:empty").length == 0){
 				 $("body").removeClass("no-scroll");
 				 $(".terms-agree-container").css("display","none");
 				 localStorage.setItem('termsAgree','shown')
+			 }
 
 			});
 
