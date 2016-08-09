@@ -49,7 +49,7 @@ html, body {
   -webkit-transition: height 2s, width 2s, background-image .2s;
   margin-left: 0px;
   position: absolute;
-  left: 50px;
+  left: 40px;
   top:20px;
   z-index: 5;
 }
@@ -683,6 +683,10 @@ dl a{
   header #fh5co-main-nav > ul li a {
     font-size: 16px;
   }
+  header #fh5co-main-nav {
+  right: 50px;
+  position: absolute;
+}
 }
 @media (max-width: 999px) {
   .logo{
