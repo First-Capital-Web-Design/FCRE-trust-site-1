@@ -142,35 +142,28 @@
 							 <br>
 							 <br>
 
+							 <div class="tiny-table">*I have read and agree to the above terms of use.</div>
+
+							 <br>
+
 							 <form id="gform" method="POST" class="pure-form pure-form-stacked"
 						   action="https://script.google.com/macros/s/AKfycbwsn83w7E_04mqTb8DaTCiOCu1VgJe445BFhbiII9EO0fAx2rPg/exec">
 						     <!-- change the form action to your script url -->
 
 						     <fieldset class="pure-group">
 						       <label for="name">Name: </label>
-						       <input id="name" name="name" placeholder="What your Mom calls you" />
+						       <input id="name" name="name" required placeholder="" />
 						     </fieldset>
 
 						     <fieldset class="pure-group">
-						       <label for="message">Message: </label>
-						       <textarea id="message" name="message" rows="10"
-						       placeholder="Tell us what's on your mind..."></textarea>
-						     </fieldset>
-
-						     <fieldset class="pure-group">
-						       <label for="email"><em>Your</em> Email Address:</label>
+						       <label for="email">Your Email Address:</label>
 						       <input id="email" name="email" type="email" value=""
-						       required placeholder="your.name@email.com"/>
+						       required placeholder=""/>
 						       <span id="email-invalid" style="visibility:hidden">
 						         Must be a valid email address</span>
 						     </fieldset>
 
-						     <fieldset class="pure-group">
-						       <label for="color">Favourite Color: </label>
-						       <input id="color" name="color" placeholder="green" />
-						     </fieldset>
-
-						     <button class="button-success pure-button button-xlarge">
+						     <button class="button-success pure-button button-xlarge continue-button">
 						       <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
 
 						   </form>
@@ -338,13 +331,18 @@
 
 			$(".continue-button").click(function(){
 
-				$("body").removeClass("no-scroll");
-				$(".terms-agree-container").remove();
+				 $("body").removeClass("no-scroll");
+				 $(".terms-agree-container").css("display","none");
+				 localStorage.setItem('termsAgree','shown')
 
 			});
 
-
+			if(localStorage.getItem('termsAgree') != 'shown'){
+					$(".terms-agree-container").css("display","block");
+					$(".terms-agree-content").css("display","block");
+	    }
 	});
+
 
 	</script>
 
