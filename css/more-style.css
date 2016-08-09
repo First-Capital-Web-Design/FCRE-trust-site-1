@@ -188,7 +188,7 @@ html, body {
   padding-top: 0px;
 }
 .board-info-container{
-  height: 500px;
+  height: auto;
   width: calc(100% - 165px);
   float: left;
   background-color: white;
