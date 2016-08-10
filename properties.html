@@ -2628,11 +2628,16 @@
 
 	    var marker, i;
 
+			var markerImage = new google.maps.MarkerImage('https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/map-flag-markers.png?raw=true',
+			    new google.maps.Size(80, 80), //size
+			    new google.maps.Point(0, 0), //origin point
+			    new google.maps.Point(0, 70)); // offset point
+
 	    for (i = 0; i < locations.length; i++) {
 	      marker = new google.maps.Marker({
 	        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 	        map: map,
-					icon: 'https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/map-flag-markers.png?raw=true',
+					icon: markerImage,
 	      });
 
 	      google.maps.event.addListener(marker, 'click', (function(marker, i) {

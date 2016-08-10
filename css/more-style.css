@@ -37,6 +37,7 @@ html, body {
   width: 320px;
   height: 82px;
   -webkit-transition: height 2s, width 2s;
+  transition: height 2s, width 2s;
   margin-left: 0px;
 }
 .logo{
@@ -47,6 +48,7 @@ html, body {
   width: 331px;
   height: 70px;
   -webkit-transition: height 2s, width 2s, background-image .2s;
+  transition: height 2s, width 2s, background-image .2s;
   margin-left: 0px;
   position: absolute;
   left: 40px;
@@ -73,6 +75,7 @@ html, body {
   font-size: 22px;
   width: 80%;
   -webkit-transition: all .8s;
+  transition: all .8s;
   margin-left: 10%;
   line-height: 30px;
   position: relative;
@@ -80,6 +83,7 @@ html, body {
 }
 .opportunity-head-active{
   -webkit-transition: all 1.2s;
+  transition: all 1.2s;
   opacity:1 !important;
 }
 .opportunity-text-hover{
@@ -88,13 +92,16 @@ html, body {
 }
 .opportunity-text-hover:hover{
   -webkit-transition: all .7s ease;
+  transition: all .7s ease;
   background-color: #444;
 }
 .opportunity-background{
   -webkit-transition: background-image 1.2s;
+  transition: background-image 1.2s;
 }
 .opportunity-background-active{
   -webkit-transition: background-image 1.2s;
+  transition: background-image 1.2s;
   background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event-blue.jpg?raw=true) !important;
 }
 .opportunity-background-blue{
@@ -106,6 +113,7 @@ html, body {
   opacity: 0;
   background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event-blue.jpg?raw=true) !important;
   -webkit-transition: all 1.5s;
+  transition: all 1.5s;
   background-size: 110% auto;
   background-position: center;
 }
@@ -131,6 +139,7 @@ html, body {
   z-index: 10;
   box-shadow: 1px 1px 8px -2px #444;
   -webkit-transition: all .8s;
+  transition: all .8s;
 }
 .investor-letter a{
   position: absolute;
@@ -138,6 +147,7 @@ html, body {
   bottom: -85px;
   width: auto;
   -webkit-transition: color .8s;
+  transition: color .8s;
   height: 45px;
   white-space: nowrap;
   overflow: hidden;
@@ -149,6 +159,7 @@ html, body {
   bottom: -55px;
   width: auto;
   -webkit-transition: color .8s;
+  transition: color .8s;
   height: 45px;
   white-space: nowrap;
   overflow: hidden;
@@ -168,6 +179,7 @@ html, body {
   margin: 0 0 0 10%;
   line-height: 28px;
   -webkit-transition: all .1s ease-out, box-shadow .5s;
+  transition: all .1s ease-out, box-shadow .5s;
   border-radius: 5px;
   font-size: 1.5vw;
   box-sizing: border-box;
@@ -248,6 +260,7 @@ html, body {
   background-color: white;
   border-left: 8px solid grey;
   -webkit-transition: all .5s;
+  transition: all .5s;
   cursor: pointer;
 }
 .name+.name{
@@ -305,6 +318,11 @@ html, body {
   padding: 14px;
   margin-top: 30px;
   -webkit-transition: all .1s ease-out;
+  border: 0px solid transparent;
+}
+.continue-button:hover{
+  background-color: orange;
+  color: #154b87;
 }
 .terms-agree-container li {
   font-size: 15px;
@@ -359,6 +377,7 @@ html, body {
   z-index: 3;
   overflow: hidden;
   -webkit-transition: all 2.5s ease-out;
+  transition: all 2.5s ease-out;
 }
 .properties-blurb:hover{
   max-height: 800px;
@@ -382,6 +401,7 @@ html, body {
   left: 0;
   display: none;
   -webkit-transition: opacity .8s;
+  transition: opacity .8s;
 }
 .pop-up-background-active{
   display: block;
@@ -398,6 +418,7 @@ html, body {
   bottom: 15vh;
   box-shadow: 1px 1px 30px #444;
   -webkit-transition: all 1.5s ease-out, opacity .8s;
+  transition: all 1.5s ease-out, opacity .8s;
   display: none;
   overflow: hidden;
   border-radius: 4px;
@@ -437,6 +458,7 @@ html, body {
   font-weight: 500;
   box-shadow: -5px 0 30px 20px #b3cccc;
   background-color: #b3cccc;
+  cursor: pointer;
 }
 
 td, th {
@@ -498,6 +520,7 @@ td .tiny-table{
   padding: 10px;
   bottom: -25px;
   -webkit-transition: all .35s ease-out;
+  transition: all .35s ease-out;
   left: 0;
 }
 .icon-overlay{
@@ -509,6 +532,7 @@ td .tiny-table{
   background-repeat: no-repeat;
   opacity: 0;
   -webkit-transition: all .35s ease-out;
+  transition: all .35s ease-out;
 }
 .property-icon:hover .icon-head{
   bottom: 0;
@@ -563,6 +587,7 @@ header{
   z-index: 5;
   border-bottom: 2px solid #154b87;
   -webkit-transition: height 1.5s;
+  transition: height 1.5s;
 }
 .visible{
   display: block;
@@ -581,6 +606,7 @@ dl a{
   width: 100%;
   padding-bottom: 10px;
   -webkit-transition: box-shadow .5s ease-out;
+  transition: box-shadow .5s ease-out;
 }
 .shadow:hover{
   box-shadow: 0px 0px 15px 0px orange;
@@ -621,6 +647,7 @@ dl a{
   cursor: pointer;
   box-shadow: 0 -18px 25px -10px lightgrey inset, 1px -3px 7px -2px grey;
   -webkit-transition: background-color .25s;
+  transition: background-color .25s;
 }
 .form-tab-active{
   border-bottom: 2px solid #154b87;
@@ -825,6 +852,7 @@ dl a{
 
   .news:hover {
     -webkit-transition: all 1s;
+    transition: all 1s;
     box-shadow: 0px 4px 30px grey;
     background-color: white !important;
   }
@@ -890,6 +918,7 @@ dl a{
     overflow: hidden;
     height: 0px;
     -webkit-transition: height 1.5s;
+    transition: height 1.5s;
     background-color: white !important;
     width: 100%;
     z-index: 10;
@@ -1070,6 +1099,7 @@ border-right: 150px solid transparent;
   bottom: 15vh;
   box-shadow: 1px 1px 30px #444, 0px 0px 2000px 2000px rgba(0, 0, 0, .5);
   -webkit-transition: all 1.5s ease-out;
+  -transition: all 1.5s ease-out;
   display: none;
   overflow: hidden;
   border-radius: 4px;
