@@ -11,31 +11,6 @@
 	<meta name="description" content="First Capital Real Estate Investments" />
 	<meta name="keywords" content="first, capital, real, estate, investments" />
 
-  <!--
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
-
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/favicon.png?raw=true">
 
@@ -72,12 +47,12 @@
 		<header style="background-color: white; box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);">
 			<div class="container text-center">
 				<div class="fh5co-navbar-brand">
-					<a href="about.html"><div class="placeholder"></div></a>
+					<a href="index.html"><div class="placeholder"></div></a>
 				</div>
 				<nav id="fh5co-main-nav" role="navigation">
 					<ul>
 
-						<li><a href="about.html">About</a></li>
+						<li><a href="index.html">About</a></li>
 						<li><a href="properties.html" class="active">Properties</a></li>
 						<li><a href="investing-in-real-estate.html">Investing In Real Estate</a></li>
 						<li><a href="filings-and-forms.html">Filings And Forms</a></li>
@@ -88,7 +63,7 @@
 			</div>
 		</header>
 
-		<a href="about.html"><div class="logo"></div></a>
+		<a href="index.html"><div class="logo"></div></a>
 
 		<div class="mobile-nav" style="width: 25px; height: 25px; background-image: url('https://www.newfangled.com/wp-content/uploads/2014/08/stuffcontentmgrfiles2ac67e44c30a21635f8a9d498f832bc1cmisc_resized80_313_257_hamenu.png'); background-size: 25px 25px;"></div>
 
@@ -2314,7 +2289,8 @@
 	<script src="js/main.js"></script>
 	<script src="js/script.js"> </script>
 
-
+	<!-- Collapses and expands navbar on mobile -->
+	<script src="js/navbar-mobile.js"></script>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgNgT1QqWiqcw1h0SJ0jDqnkZavxmubas&callback=initMap" type="text/javascript"></script>
 
@@ -2658,16 +2634,6 @@
 			$(function() {
 
 			    smoothScroll();
-			});
-
-			$(".mobile-nav").click(function(){
-				$("#fh5co-main-nav").toggleClass("nav-active");
-				$(".info-button-container").toggleClass("nav-info-active");
-				$(".info-content").removeClass("info-content-slided");
-				$(".info-button").removeClass("info-button-active");
-				$(".page-footer").removeClass("slided");
-				$(".slider-button").removeClass("rotated");
-
 			});
 
 			// $(".continue-button").click(function(){
