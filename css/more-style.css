@@ -16,7 +16,7 @@ html, body {
   padding: 0;
 }
 .arrow-full-width{
-  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/arrow-full-width.png?raw=true);
+  background-image: url(../images/arrow-full-width.png);
   background-size: 100vw 80px;
   height: 80px;
   width: 100vw;
@@ -55,7 +55,7 @@ html, body {
   margin-left: 0px;
 }
 .logo{
-  background-image: url("https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/trust-logo.png?raw=true") !important;
+  background-image: url(../images/trust-logo.png) !important;
   background-size: 100% 100%;
   background-position: center;
   display: block;
@@ -108,31 +108,6 @@ html, body {
   -webkit-transition: all .7s ease;
   transition: all .7s ease;
   background-color: #444;
-}
-.opportunity-background{
-  -webkit-transition: background-image 1.2s;
-  transition: background-image 1.2s;
-}
-.opportunity-background-active{
-  -webkit-transition: background-image 1.2s;
-  transition: background-image 1.2s;
-  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event-blue.jpg?raw=true) !important;
-}
-.opportunity-background-blue{
-  position: absolute;
-  left: 0;
-  top: 100px;
-  width: 100vw;
-  height: calc(100vh - 40px);
-  opacity: 0;
-  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/the-granary-hotel-event-blue.jpg?raw=true) !important;
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-  background-size: 110% auto;
-  background-position: center;
-}
-.opportunity-background-blue-active{
-  opacity: 1;
 }
 .section-head{
   margin-top: 60px;
@@ -515,7 +490,7 @@ td .tiny-table{
   float: left;
   box-shadow: 1px 1px 6px grey;
   overflow: hidden;
-  background-image: url(https://github.com/First-Capital-Web-Design/FCRE-trust-site-1/blob/gh-pages/images/TildenProperty0.jpg?raw=true);
+  background-image: url(../images/TildenProperty0.jpg);
   background-size: auto 165px;
   background-position: top;
   background-repeat: no-repeat;
